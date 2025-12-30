@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { ChevronLeft, ChevronRight, Eye, EyeOff } from 'lucide-react';
+import { Analytics } from '@vercel/analytics/react';
 import { LayoutOption1 } from './components/LayoutOption1';
 import { LayoutOption4 } from './components/LayoutOption4';
 import { LayoutOption5 } from './components/LayoutOption5';
@@ -64,6 +65,7 @@ export default function App() {
   if (showDesignLibrary) {
     return (
       <div>
+        <Analytics />
         <DesignPatternLibrary />
         <button
           onClick={() => setShowDesignLibrary(false)}
